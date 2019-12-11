@@ -3,8 +3,13 @@
 require '../vendor/autoload.php';
 use Symfony\Component\Dotenv\Dotenv;
 
-$env = new Dotenv(true);
-$env->load(__DIR__.'/../.env');
+try {
+    $env = new Dotenv(true);
+    $env->load(__DIR__.'/../.env');
+} catch (\Throwable $th) {
+    die('.env not loaded, please copy from .env.example');
+}
+
 function env($key, $def = '')
 {
     return isset($_ENV[$key]) ? $_ENV[$key] : $def;
