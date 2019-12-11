@@ -1,0 +1,15 @@
+{
+    "name": "adeiskandar/api-proxy",
+    "description": "ini merupakan proxy untuk API agar bisa melewati block cors",
+    "type": "project",
+    "require": {
+        "symfony/dotenv": "^5.0"
+    },
+    "license": "limited",
+    "authors": [
+        {
+            "name": "ade",
+            "email": "ade@nusa.net.id"
+        }
+    ]
+}
